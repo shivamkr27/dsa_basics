@@ -19,6 +19,6 @@ public class display{
     Scanner scn = new Scanner(System.in);
     int a = scn.nextInt();
 int b = scn.nextInt();
-System.out.println("Sum="+(a+b) +", "+"diff="+(a-b) +", "+"Product="+(a*b) +", " +"quotient="+(a/b)    );
+System.out.println("Sum="+(a+b) +", "+"diff="+(a-b) +", "+"Product="+(a*b) +", " +"quotient="+((b!=0)?(a/b):"can not divide by zero)")    );
   }
 }
