@@ -4,48 +4,44 @@ public class pattern_10{
     Scanner scn = new Scanner(System.in);
     int n = scn.nextInt();
   
-  
-        // Upper half including middle
-        for (int i = 1; i <= n / 2 + 1; i++) {
-            // Print leading spaces
-            for (int s = 1; s <= (n / 2 + 1 - i); s++) {
-                System.out.print("  ");
-            }
-
-            // Increasing numbers
-            for (int j = i; j <= 2 * i - 1; j++) {
-                System.out.print(j + " ");
-            }
-
-            // Decreasing numbers
-            for (int j = 2 * i - 2; j >= i; j--) {
-                System.out.print(j + " ");
-            }
-
-            System.out.println();
-        }
-
-        // Lower half (mirror of upper half, excluding middle)
-        for (int i = n / 2; i >= 1; i--) {
-            // Print leading spaces
-            for (int s = 1; s <= (n / 2 + 1 - i); s++) {
-                System.out.print("  ");
-            }
-
-            // Increasing numbers
-            for (int j = i; j <= 2 * i - 1; j++) {
-                System.out.print(j + " ");
-            }
-
-            // Decreasing numbers
-            for (int j = 2 * i - 2; j >= i; j--) {
-                System.out.print(j + " ");
-            }
-
-            System.out.println();
-        }
+  int space =n/2;
+  int star =1;
+   int value =1;
+   for(int i=1;i<=n;i++){
+    for(int j=1; j<=space;j++){
+      System.out.print("\t");
     }
+     int cval =value;
+     for(int j=1;j<=star;j++){
+      System.out.print(cval +"\t");
+if(j<=star/2){
+  cval++;}
+  else {
+    cval--;
+  }
 }
+if(i<=n/2){
+  space--;
+  star +=2;
+  value++;
+}
+else{
+  space++;
+  star -=2;
+  value--;
+}
+
+System.out.println();
+
+
+
+     }
+
+   }
+   
+       
+    }
+
 
   
     
